@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modeling.LabTwo", "Modeling.LabTwo\Modeling.LabTwo.csproj", "{7309F5FD-0BD7-4DDE-B011-4EE130F9EC01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modeling.LabTwo.WpfGui", "Modeling.LabTwo.WpfGui\Modeling.LabTwo.WpfGui.csproj", "{18E3AED2-7B64-4F71-8D28-FDB7F49B2E33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{7309F5FD-0BD7-4DDE-B011-4EE130F9EC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7309F5FD-0BD7-4DDE-B011-4EE130F9EC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7309F5FD-0BD7-4DDE-B011-4EE130F9EC01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E3AED2-7B64-4F71-8D28-FDB7F49B2E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E3AED2-7B64-4F71-8D28-FDB7F49B2E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E3AED2-7B64-4F71-8D28-FDB7F49B2E33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E3AED2-7B64-4F71-8D28-FDB7F49B2E33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,9 +7,9 @@ namespace Modeling.LabTwo
     public class Distribution
     {
 
-        private static ICollection<Double> SourceRealization;
+        private static readonly ICollection<Double> SourceRealization;
 
-        Distribution()
+        static Distribution()
         {
             Generator generator = new Generator();
             generator.GenerateRealization();
