@@ -48,19 +48,34 @@ namespace Modeling.LabTwo
         private static Double TakeSum(Int32 i, Int32 bound = 6)
         {
             Double result = 0.0;
-            for (int j = 0; j < bound; ++j)
+            try
             {
-                result += SourceRealization.ElementAt(i + j);
+                for (int j = 0; j < bound; ++j)
+                {
+                    result += SourceRealization.ElementAt(i + j);
+                }
             }
+            catch (ArgumentOutOfRangeException e)
+            {
+            }
+            
             return result;
         }
 
         private static Double TakeSum(Int32 i, Int32 bound, Func<Double,Double> modifier )
         {
             Double result = 0.0;
-            for (int j = 0; j < bound; ++j)
+            
+            try
             {
-                result += modifier(SourceRealization.ElementAt(i + j));
+                for (int j = 0; j < bound; ++j)
+                {
+                    result += modifier(SourceRealization.ElementAt(i + j));
+                }
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                
             }
             return result;
         }

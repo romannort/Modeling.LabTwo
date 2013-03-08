@@ -59,6 +59,7 @@ namespace Modeling.LabTwo.WpfGui
             InitializeComponent();
             this.DistributionBox.ItemsSource = distributionNames;
             distribution = new Distribution();
+            selectedIndex = 0;
         }
 
 
@@ -251,14 +252,16 @@ namespace Modeling.LabTwo.WpfGui
             ICollection<Double> result = new List<double>();
 
             const Int32 intervalCount = 20;
-            const Double intervalLength = 1 / (Double)intervalCount;
+            Double maxVlaue = realization.Max();
+            Double minValue = realization.Min();
+            Double intervalLength = (maxVlaue - minValue) / intervalCount;
 
-            Double from = 0.0;
-            Double to = intervalLength;
+            Double from = minValue;
+            Double to = minValue + intervalLength;
 
             for (int i = 0; i < 20; ++i)
             {
-                Int32 hits = realization.Count(r => r <= to && r > from);
+                Int32 hits = realization.Count(r => r > from && r <= to );
                 Double probability = (Double)hits / realization.Count;
 
                 result.Add(probability);
